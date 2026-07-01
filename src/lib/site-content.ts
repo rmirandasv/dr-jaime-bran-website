@@ -5,11 +5,22 @@ export const siteContent = {
   specialty: "Odontología general e infantil",
   description:
     "Desde limpiezas dentales hasta tratamientos avanzados, te ofrecemos un servicio integral y personalizado.",
+  heroEyebrow: "Odontología · San Salvador",
+  heroPromise:
+    "Una atención dental cuidada, personal y honesta para vos y tu familia.",
+  signature: "Dr. Jaime Bran · Odontólogo",
   about: {
-    title: "Atención experta para toda la familia",
+    kicker: "Sobre nosotros",
+    title: "Una práctica pensada para cada miembro de la familia.",
     paragraphs: [
       "El Dr. Bran cuenta con un equipo profesional calificado y con amplia experiencia en odontopediatría, odontología general y estética dental.",
       "¡Sonrisas radiantes empiezan aquí! Consulta general e infantil con atención experta y personalizada para que tú y tu familia luzcan con confianza.",
+    ],
+    highlights: [
+      { label: "Equipo profesional", detail: "Calificado y cercano" },
+      { label: "Experiencia clínica", detail: "Años de práctica" },
+      { label: "Atención personalizada", detail: "Planes a la medida" },
+      { label: "Ambiente familiar", detail: "Niños y adultos bienvenidos" },
     ],
   },
   services: [

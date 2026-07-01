@@ -10,6 +10,7 @@ const dmSans = DM_Sans({
 const playfair = Playfair_Display({
   variable: "--font-heading",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
