@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -27,23 +29,33 @@ export function ContactSection() {
           </h2>
         </header>
 
-        <div className="mt-14 grid gap-x-12 gap-y-10 border-t border-border pt-10 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-              Visítanos
-            </p>
-            <address className="mt-4 not-italic font-heading text-3xl leading-[1.15] tracking-[-0.01em] sm:text-4xl">
-              {siteContent.contact.address}
-              <br />
-              <span className="text-foreground/70 italic">
-                {siteContent.contact.city}, {siteContent.contact.country}
-              </span>
-            </address>
-            <div className="mt-8">
+        <div className="mt-14 grid gap-8 border-t border-border pt-10 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-7">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-border bg-muted sm:aspect-[4/5]">
+              <Image
+                src={siteContent.images.clinicInterior.src}
+                alt={siteContent.images.clinicInterior.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-5">
+                <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-background/90">
+                  {siteContent.contact.address}
+                </p>
+                <p className="mt-1 font-heading text-lg italic text-background">
+                  {siteContent.contact.city}, {siteContent.contact.country}
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+              <p className="font-heading text-sm italic text-foreground/80">
+                Te esperamos en la sala de espera.
+              </p>
               <Button
                 nativeButton={false}
                 variant="outline"
-                size="lg"
+                size="sm"
                 render={
                   <a
                     href={siteContent.contact.mapsUrl}
@@ -59,35 +71,32 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-5 lg:pl-6">
             <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
               Horario
             </p>
-            <ul className="mt-4 space-y-3 text-base">
+            <ul className="mt-4 space-y-4 text-base">
               {siteContent.hours.map((schedule) => (
                 <li
                   key={schedule.days}
-                  className="flex flex-col border-b border-border/70 pb-3 last:border-b-0"
+                  className="flex items-baseline justify-between border-b border-border/70 pb-3 last:border-b-0"
                 >
-                  <span className="font-medium text-foreground">
+                  <span className="text-sm text-muted-foreground">
                     {schedule.days}
                   </span>
-                  <span className="font-heading text-2xl italic text-foreground/80">
+                  <span className="font-heading text-2xl italic text-foreground/85">
                     {schedule.time}
                   </span>
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-muted-foreground">
-              {siteContent.contact.whatsappNote}.
-            </p>
-          </div>
 
-          <div className="lg:col-span-4">
+            <Separator className="my-8 bg-border" />
+
             <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
               WhatsApp
             </p>
-            <p className="mt-4 font-heading text-4xl leading-none tracking-[-0.01em] sm:text-5xl">
+            <p className="mt-3 font-heading text-5xl leading-none tracking-[-0.01em]">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
@@ -98,7 +107,7 @@ export function ContactSection() {
               </a>
             </p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Respondemos por mensaje. Más rápido que una llamada.
+              {siteContent.contact.whatsappNote}. Respondemos por mensaje.
             </p>
             <div className="mt-6">
               <WhatsAppButton size="lg" label="Iniciar conversación" />
@@ -110,7 +119,7 @@ export function ContactSection() {
 
         <div className="flex flex-col items-start gap-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
-            ¿Prefieres llamarnos? Estamos disponibles durante el horario de
+            ¿Prefieres otro canal? Estamos disponibles durante el horario de
             atención.
           </p>
           <a

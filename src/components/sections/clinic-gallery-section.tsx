@@ -26,41 +26,46 @@ export function ClinicGallerySection() {
               Cada detalle — desde la sala de espera hasta el consultorio —
               está pensado para que la visita sea tranquila, breve y clara.
             </p>
+
+            <figure className="mt-10 hidden border-l border-border/80 pl-6 lg:block">
+              <blockquote className="font-heading text-2xl italic leading-snug text-foreground">
+                &ldquo;Llegar, respirar, sentarse. Empezamos cuando estés
+                listo.&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                {siteContent.signature}
+              </figcaption>
+            </figure>
           </header>
 
-          <div className="grid gap-4 lg:col-span-7 lg:grid-cols-7 lg:grid-rows-2">
-            <figure className="relative aspect-[4/3] overflow-hidden rounded-sm bg-muted lg:col-span-7 lg:aspect-[16/9] lg:row-span-1">
+          <div className="relative lg:col-span-7">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-border/60 bg-muted">
               <Image
-                src={siteContent.images.clinicExterior.src}
-                alt={siteContent.images.clinicExterior.alt}
+                src={siteContent.images.locationMap.src}
+                alt={siteContent.images.locationMap.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover"
               />
-              <figcaption className="absolute bottom-3 left-3 rounded-sm bg-background/95 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-foreground backdrop-blur">
-                Entrada · {siteContent.contact.address}
-              </figcaption>
-            </figure>
-
-            <figure className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted lg:col-span-3 lg:aspect-auto lg:row-span-1">
-              <Image
-                src={siteContent.images.clinicInterior.src}
-                alt={siteContent.images.clinicInterior.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 30vw"
-                className="object-cover"
-              />
-            </figure>
-
-            <div className="flex flex-col justify-center rounded-sm border border-border/60 bg-background p-6 lg:col-span-4 lg:p-8">
-              <p className="font-heading text-xl italic leading-snug text-foreground">
-                &ldquo;Llegar, respirar, sentarse. Empezamos cuando estés
-                listo.&rdquo;
+            </div>
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-border/70 pt-4">
+              <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                {siteContent.contact.address}
               </p>
-              <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                {siteContent.signature}
+              <p className="font-heading text-sm italic text-foreground/80">
+                {siteContent.contact.city}, {siteContent.contact.country}
               </p>
             </div>
+
+            <figure className="mt-10 border-l border-border/80 pl-6 lg:hidden">
+              <blockquote className="font-heading text-xl italic leading-snug text-foreground">
+                &ldquo;Llegar, respirar, sentarse. Empezamos cuando estés
+                listo.&rdquo;
+              </blockquote>
+              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                {siteContent.signature}
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

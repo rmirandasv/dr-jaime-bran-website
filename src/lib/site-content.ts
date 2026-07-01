@@ -71,14 +71,43 @@ export const siteContent = {
     { label: "Contacto", href: "#contacto" },
   ],
   images: {
-    logo: { src: "/images/logo.png", alt: "Logo Clínica Odontológica Dr. Jaime Bran" },
-    clinicExterior: {
-      src: "/images/clinic-exterior.jpg",
-      alt: "Entrada de la Clínica Odontológica Dr. Jaime Bran en San Salvador",
+    logo: {
+      src: "/images/logo.png",
+      alt: "Logo Clínica Odontológica Dr. Jaime Bran",
+    },
+    heroBg: {
+      src: "/images/generated/hero-bg.jpg",
+      alt: "Ambiente cálido del consultorio del Dr. Jaime Bran",
+    },
+    aboutDetail: {
+      src: "/images/generated/about-detail.jpg",
+      alt: "Instrumentos dentales sobre bandeja de madera, listos para la consulta",
     },
     clinicInterior: {
       src: "/images/clinic-interior.jpg",
       alt: "Sala de espera de la Clínica Odontológica Dr. Jaime Bran",
+    },
+    locationMap: {
+      src: "/images/generated/location-map.jpg",
+      alt: "Mapa estilizado de la ubicación de la clínica",
+    },
+  },
+  serviceImages: {
+    pediatric: {
+      src: "/images/generated/service-pediatric.jpg",
+      alt: "Juguete de madera con forma de diente sobre lino y eucalipto",
+    },
+    general: {
+      src: "/images/generated/service-general.jpg",
+      alt: "Espejo y sonda dental sobre bandeja de madera",
+    },
+    aesthetic: {
+      src: "/images/generated/service-aesthetic.jpg",
+      alt: "Modelos de porcelana de dientes sobre fondo cálido",
+    },
+    cleaning: {
+      src: "/images/generated/service-cleaning.jpg",
+      alt: "Gotas de agua sobre superficie verde salvia",
     },
   },
 } as const;

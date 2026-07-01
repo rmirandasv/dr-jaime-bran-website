@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { siteContent } from "@/lib/site-content";
 
 export function AboutSection() {
@@ -19,6 +21,21 @@ export function AboutSection() {
             >
               {siteContent.about.title}
             </h2>
+
+            <figure className="mt-10 hidden lg:block">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-muted">
+                <Image
+                  src={siteContent.images.aboutDetail.src}
+                  alt={siteContent.images.aboutDetail.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                Detalle · {siteContent.signature}
+              </figcaption>
+            </figure>
           </header>
 
           <div className="lg:col-span-7 lg:pl-6">
@@ -54,6 +71,21 @@ export function AboutSection() {
                 ))}
               </dl>
             </div>
+
+            <figure className="mt-10 lg:hidden">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-muted">
+                <Image
+                  src={siteContent.images.aboutDetail.src}
+                  alt={siteContent.images.aboutDetail.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                Detalle · {siteContent.signature}
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

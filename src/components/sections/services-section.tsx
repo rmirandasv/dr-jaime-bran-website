@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { siteContent } from "@/lib/site-content";
 
 export function ServicesSection() {
@@ -30,11 +32,15 @@ export function ServicesSection() {
         <ol className="divide-y divide-background/15">
           {siteContent.services.map((service, index) => {
             const position = String(index + 1).padStart(2, "0");
+            const visual =
+              siteContent.serviceImages[
+                service.id as keyof typeof siteContent.serviceImages
+              ];
 
             return (
               <li
                 key={service.id}
-                className="group grid grid-cols-[auto_1fr] gap-6 py-8 transition-colors sm:grid-cols-[5rem_1fr_auto] sm:gap-10 sm:py-10"
+                className="group grid grid-cols-[auto_1fr] gap-x-6 gap-y-4 py-8 transition-colors sm:grid-cols-[5rem_5rem_1fr_auto] sm:gap-x-8 sm:py-10"
               >
                 <span
                   aria-hidden="true"
@@ -42,6 +48,18 @@ export function ServicesSection() {
                 >
                   {position}
                 </span>
+
+                <div className="relative aspect-square w-20 overflow-hidden rounded-sm border border-background/15 bg-background/5 sm:w-24">
+                  {visual ? (
+                    <Image
+                      src={visual.src}
+                      alt={visual.alt}
+                      fill
+                      sizes="(max-width: 640px) 80px, 96px"
+                      className="object-cover"
+                    />
+                  ) : null}
+                </div>
 
                 <div>
                   <h3 className="font-heading text-2xl leading-tight tracking-[-0.01em] sm:text-3xl">

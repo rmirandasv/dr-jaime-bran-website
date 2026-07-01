@@ -9,98 +9,96 @@ export function HeroSection() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="relative bg-background"
+      className="relative isolate overflow-hidden bg-foreground text-background"
     >
-      <div className="border-b border-border/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-            {siteContent.heroEyebrow}
-          </p>
-          <p className="hidden text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground sm:block">
-            {siteContent.name}
-          </p>
+      <Image
+        src={siteContent.images.heroBg.src}
+        alt={siteContent.images.heroBg.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-[85%_center]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-foreground via-foreground/85 to-foreground/20"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-foreground/40"
+      />
+
+      <div className="mx-auto flex min-h-[88svh] max-w-6xl flex-col px-4 pt-12 pb-16 sm:px-6 lg:pt-16 lg:pb-20">
+        <div className="flex items-center justify-between border-b border-background/15 pb-4 text-[11px] font-medium uppercase tracking-[0.28em] text-background/70">
+          <p>{siteContent.heroEyebrow}</p>
+          <p className="hidden sm:block">{siteContent.name}</p>
         </div>
-      </div>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 pt-16 pb-20 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:pt-24 lg:pb-28">
-        <div className="lg:col-span-7 lg:pr-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent-foreground/80">
-            {siteContent.specialty}
-          </p>
+        <div className="grid flex-1 content-end gap-10 pt-16 pb-12 lg:grid-cols-12 lg:gap-16 lg:pt-24 lg:pb-20">
+          <div className="lg:col-span-7">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent">
+              {siteContent.specialty}
+            </p>
 
-          <h1
-            id="hero-title"
-            className="mt-6 font-heading text-[clamp(2.75rem,7vw,5.75rem)] leading-[0.96] tracking-[-0.02em] text-balance text-foreground"
-          >
-            Cuidamos tu{" "}
-            <span className="italic text-primary">sonrisa</span>
-            <span className="text-muted-foreground/60">,</span>
-            <br />
-            <span className="text-foreground">una visita a la vez.</span>
-          </h1>
-
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            {siteContent.heroPromise}
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <WhatsAppButton size="lg" />
-            <a
-              href="#servicios"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-foreground underline-offset-[6px] hover:underline"
+            <h1
+              id="hero-title"
+              className="mt-6 max-w-3xl font-heading text-[clamp(2.75rem,7.5vw,6rem)] leading-[0.95] tracking-[-0.02em] text-balance text-background"
             >
-              Conoce nuestros servicios
-              <span
-                aria-hidden="true"
-                className="transition-transform group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </a>
-          </div>
-        </div>
+              Cuidamos tu{" "}
+              <span className="italic text-accent">sonrisa</span>
+              <span className="text-background/50">,</span>
+              <br />
+              una visita a la vez.
+            </h1>
 
-        <div className="relative lg:col-span-5">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-muted lg:aspect-[3/4]">
-            <Image
-              src={siteContent.images.clinicExterior.src}
-              alt={siteContent.images.clinicExterior.alt}
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-5">
-              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-background/90">
-                {siteContent.contact.address}
-              </p>
-              <p className="mt-1 font-heading text-lg italic text-background">
-                {siteContent.contact.city}, {siteContent.contact.country}
-              </p>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-background/80">
+              {siteContent.heroPromise}
+            </p>
+
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <WhatsAppButton size="lg" variant="default" />
+              <a
+                href="#servicios"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-background underline-offset-[6px] hover:underline"
+              >
+                Conoce nuestros servicios
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
             </div>
           </div>
 
-          <div className="mt-4 hidden border-t border-border/70 pt-3 lg:block">
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-              {siteContent.signature}
-            </p>
+          <div className="hidden lg:col-span-5 lg:flex lg:flex-col lg:justify-end">
+            <div className="border-t border-background/20 pt-4">
+              <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/60">
+                {siteContent.signature}
+              </p>
+              <p className="mt-3 max-w-xs font-heading text-xl italic leading-snug text-background/85">
+                &ldquo;Una visita tranquila empieza por una atención que
+                escucha.&rdquo;
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-border/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-            Horario · Citas por WhatsApp
-          </p>
-          <ul className="flex flex-wrap gap-x-8 gap-y-1 text-sm text-foreground">
-            {siteContent.hours.map((schedule) => (
-              <li key={schedule.days} className="flex gap-3">
-                <span className="text-muted-foreground">{schedule.days}</span>
-                <span className="font-medium">{schedule.time}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="border-t border-background/15 pt-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/60">
+              Horario · Citas por WhatsApp
+            </p>
+            <ul className="flex flex-wrap gap-x-8 gap-y-1 text-sm text-background/90">
+              {siteContent.hours.map((schedule) => (
+                <li key={schedule.days} className="flex gap-3">
+                  <span className="text-background/60">{schedule.days}</span>
+                  <span className="font-medium">{schedule.time}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
