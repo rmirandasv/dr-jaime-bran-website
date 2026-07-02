@@ -57,6 +57,8 @@ export const siteContent = {
     whatsappNote: "Solo mensajes por WhatsApp",
     mapsUrl:
       "https://www.waze.com/es/live-map/directions/sv/san-salvador-department/san-salvador/clinica-odontologica-dr.-jaime-bran?to=place.ChIJywY1qpgxY48Rawof3FH5vao",
+    mapsEmbedUrl:
+      "https://maps.google.com/maps?q=place_id:ChIJywY1qpgxY48Rawof3FH5vao&hl=es&z=16&output=embed",
     facebookUrl:
       "https://www.facebook.com/p/Cl%C3%ADnica-Odontol%C3%B3gica-Dr-Jaime-Bran-61556467850854/",
   },

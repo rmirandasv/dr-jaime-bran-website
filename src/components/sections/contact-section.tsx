@@ -37,7 +37,7 @@ export function ContactSection() {
                 alt={siteContent.images.clinicInterior.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
+                className="object-cover [filter:saturate(0.55)_hue-rotate(-12deg)_sepia(0.22)_brightness(0.96)]"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-5">
                 <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-background/90">

@@ -30,7 +30,10 @@ export function WhatsAppButton({
       }
       size={size}
       variant={variant}
-      className={cn("gap-2", className)}
+      className={cn(
+        "gap-2 bg-accent font-medium text-accent-foreground shadow-sm hover:bg-accent/90 hover:text-accent-foreground",
+        className
+      )}
     >
       <MessageCircle className="size-5" aria-hidden="true" />
       {label}

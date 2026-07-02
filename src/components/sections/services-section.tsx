@@ -10,9 +10,9 @@ export function ServicesSection() {
       className="bg-foreground text-background"
     >
       <div className="mx-auto max-w-6xl px-4 pt-20 pb-16 sm:px-6 lg:pt-28 lg:pb-20">
-        <div className="flex flex-col gap-8 border-b border-background/15 pb-10 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-8 border-b border-background/20 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/60">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/70">
               Servicios
             </p>
             <h2
@@ -23,13 +23,13 @@ export function ServicesSection() {
               de la primera consulta a la sonrisa final.
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-background/70">
+          <p className="max-w-sm text-sm leading-relaxed text-background/85">
             Cada servicio se planifica según tu caso. Empezamos por escucharte
             y terminamos cuando estás conforme.
           </p>
         </div>
 
-        <ol className="divide-y divide-background/15">
+        <ol className="divide-y divide-background/20">
           {siteContent.services.map((service, index) => {
             const position = String(index + 1).padStart(2, "0");
             const visual =
@@ -44,12 +44,12 @@ export function ServicesSection() {
               >
                 <span
                   aria-hidden="true"
-                  className="font-heading text-2xl italic text-background/40 transition-colors group-hover:text-accent sm:text-3xl"
+                  className="font-heading text-2xl italic text-background/70 transition-colors group-hover:text-accent sm:text-3xl"
                 >
                   {position}
                 </span>
 
-                <div className="relative aspect-square w-20 overflow-hidden rounded-sm border border-background/15 bg-background/5 sm:w-24">
+                <div className="relative aspect-square w-20 overflow-hidden rounded-sm border border-background/20 bg-background/5 sm:w-24">
                   {visual ? (
                     <Image
                       src={visual.src}
@@ -65,7 +65,7 @@ export function ServicesSection() {
                   <h3 className="font-heading text-2xl leading-tight tracking-[-0.01em] sm:text-3xl">
                     {service.title}
                   </h3>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-background/70 sm:text-base">
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-background/85 sm:text-base">
                     {service.description}
                   </p>
                 </div>
@@ -73,7 +73,7 @@ export function ServicesSection() {
                 <a
                   href="#contacto"
                   aria-label={`Agendar ${service.title.toLowerCase()} por WhatsApp`}
-                  className="col-span-2 inline-flex items-center gap-2 self-end text-sm font-medium text-background/80 underline-offset-[6px] transition-colors hover:text-accent hover:underline sm:col-span-1"
+                  className="col-span-2 inline-flex items-center gap-2 self-end text-sm font-medium text-background/90 underline-offset-[6px] transition-colors hover:text-accent hover:underline sm:col-span-1"
                 >
                   Agendar
                   <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">

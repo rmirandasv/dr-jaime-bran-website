@@ -3,6 +3,10 @@ import Image from "next/image";
 import { siteContent } from "@/lib/site-content";
 
 export function AboutSection() {
+  const [firstParagraph, ...restParagraphs] = siteContent.about.paragraphs;
+  const firstLetter = firstParagraph.charAt(0);
+  const restOfFirst = firstParagraph.slice(1);
+
   return (
     <section
       id="nosotros"
@@ -39,20 +43,24 @@ export function AboutSection() {
           </header>
 
           <div className="lg:col-span-7 lg:pl-6">
-            <div className="space-y-5 text-lg leading-relaxed text-foreground/85">
-              {siteContent.about.paragraphs.map((paragraph, index) => (
-                <p
-                  key={paragraph}
-                  className={
-                    index === 0
-                      ? "first-letter:font-heading first-letter:text-5xl first-letter:font-medium first-letter:italic first-letter:text-primary first-letter:float-left first-letter:mr-3 first-letter:leading-[0.9]"
-                      : undefined
-                  }
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            <p className="text-lg leading-relaxed text-foreground/90">
+              <span
+                aria-hidden="true"
+                className="float-left mr-3 mt-1 font-heading text-5xl font-medium leading-[0.85] text-primary"
+              >
+                {firstLetter}
+              </span>
+              {restOfFirst}
+            </p>
+
+            {restParagraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="mt-5 text-lg leading-relaxed text-foreground/90"
+              >
+                {paragraph}
+              </p>
+            ))}
 
             <div className="mt-12 border-t border-border pt-8">
               <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
