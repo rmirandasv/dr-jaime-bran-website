@@ -14,30 +14,30 @@ export function AboutSection() {
       className="bg-background"
     >
       <div className="mx-auto max-w-6xl px-4 pt-24 pb-20 sm:px-6 lg:pt-32 lg:pb-28">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <header className="lg:col-span-5">
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent-foreground/80">
-              {siteContent.about.kicker}
-            </p>
-            <h2
-              id="about-title"
-              className="mt-6 font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.05] tracking-[-0.01em] text-balance"
-            >
-              {siteContent.about.title}
-            </h2>
+        <header className="max-w-2xl">
+          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent-foreground/80">
+            {siteContent.about.kicker}
+          </p>
+          <h2
+            id="about-title"
+            className="mt-6 font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.05] tracking-[-0.01em] text-balance"
+          >
+            {siteContent.about.title}
+          </h2>
+        </header>
 
-            <figure className="mt-10 hidden lg:block">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-muted">
-                <Image
-                  src={siteContent.images.aboutDetail.src}
-                  alt={siteContent.images.aboutDetail.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            </figure>
-          </header>
+        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-12 lg:items-start lg:gap-16">
+          <figure className="lg:col-span-5">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-border bg-muted">
+              <Image
+                src={siteContent.images.aboutDetail.src}
+                alt={siteContent.images.aboutDetail.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
+          </figure>
 
           <div className="lg:col-span-7 lg:pl-6">
             <p className="text-lg leading-relaxed text-foreground/90">
@@ -76,18 +76,6 @@ export function AboutSection() {
                 ))}
               </dl>
             </div>
-
-            <figure className="mt-10 lg:hidden">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-muted">
-                <Image
-                  src={siteContent.images.aboutDetail.src}
-                  alt={siteContent.images.aboutDetail.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            </figure>
           </div>
         </div>
       </div>
