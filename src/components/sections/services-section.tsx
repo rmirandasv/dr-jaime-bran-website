@@ -13,19 +13,21 @@ export function ServicesSection() {
         <div className="flex flex-col gap-8 border-b border-background/20 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/70">
-              Servicios
+              {siteContent.sections.services.kicker}
             </p>
             <h2
               id="services-title"
               className="mt-4 max-w-2xl font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.05] tracking-[-0.01em] text-balance"
             >
-              Una atención <span className="italic text-accent">completa</span>,
-              de la primera consulta a la sonrisa final.
+              {siteContent.sections.services.title}{" "}
+              <span className="italic text-accent">
+                {siteContent.sections.services.titleAccent}
+              </span>
+              .
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-background/85">
-            Cada servicio se planifica según tu caso. Empezamos por escucharte
-            y terminamos cuando estás conforme.
+            {siteContent.sections.services.description}
           </p>
         </div>
 

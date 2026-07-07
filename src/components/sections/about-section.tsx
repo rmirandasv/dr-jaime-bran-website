@@ -36,9 +36,6 @@ export function AboutSection() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                Detalle · {siteContent.signature}
-              </figcaption>
             </figure>
           </header>
 
@@ -64,7 +61,7 @@ export function AboutSection() {
 
             <div className="mt-12 border-t border-border pt-8">
               <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                Lo que cuidamos en cada visita
+                {siteContent.about.highlightsHeading}
               </p>
               <dl className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2">
                 {siteContent.about.highlights.map((item) => (
@@ -90,9 +87,6 @@ export function AboutSection() {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                Detalle · {siteContent.signature}
-              </figcaption>
             </figure>
           </div>
         </div>

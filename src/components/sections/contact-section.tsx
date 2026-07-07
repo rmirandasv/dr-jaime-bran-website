@@ -18,14 +18,16 @@ export function ContactSection() {
       <div className="mx-auto max-w-6xl px-4 pt-24 pb-24 sm:px-6 lg:pt-32 lg:pb-32">
         <header className="max-w-3xl">
           <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent-foreground/80">
-            Contacto
+            {siteContent.sections.contact.kicker}
           </p>
           <h2
             id="contact-title"
             className="mt-6 font-heading text-[clamp(2.5rem,5vw,4.5rem)] leading-[1] tracking-[-0.02em] text-balance"
           >
-            ¿Listos para verte?{" "}
-            <span className="italic text-primary">Escríbenos</span>.
+            {siteContent.sections.contact.title}{" "}
+            <span className="italic text-primary">
+              {siteContent.sections.contact.titleAccent}
+            </span>
           </h2>
         </header>
 
@@ -49,8 +51,8 @@ export function ContactSection() {
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-              <p className="font-heading text-sm italic text-foreground/80">
-                Te esperamos en la sala de espera.
+              <p className="text-sm text-foreground/80">
+                {siteContent.sections.contact.locationNote}
               </p>
               <Button
                 nativeButton={false}

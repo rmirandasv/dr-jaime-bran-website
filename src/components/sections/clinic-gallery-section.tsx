@@ -11,29 +11,33 @@ export function ClinicGallerySection() {
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
           <header className="lg:col-span-5">
             <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-accent-foreground/80">
-              La clínica
+              {siteContent.sections.clinic.kicker}
             </p>
             <h2
               id="clinic-title"
               className="mt-6 font-heading text-[clamp(2.25rem,4.5vw,3.75rem)] leading-[1.05] tracking-[-0.01em] text-balance"
             >
-              Un espacio pensado para que te sientas{" "}
-              <span className="italic text-primary">en casa</span>.
+              {siteContent.sections.clinic.title}{" "}
+              <span className="italic text-primary">
+                {siteContent.sections.clinic.titleAccent}
+              </span>
+              .
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-foreground/80">
-              Cada detalle — desde la sala de espera hasta el consultorio —
-              está pensado para que la visita sea tranquila, breve y clara.
+              {siteContent.sections.clinic.description}
             </p>
 
-            <figure className="mt-10 hidden border-l border-border/80 pl-6 lg:block">
-              <blockquote className="font-heading text-2xl italic leading-snug text-foreground">
-                &ldquo;Llegar, respirar, sentarse. Empezamos cuando estés
-                listo.&rdquo;
-              </blockquote>
-              <figcaption className="mt-4 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                {siteContent.signature}
-              </figcaption>
-            </figure>
+            <div className="mt-10 hidden border-l border-border/80 pl-6 lg:block">
+              <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                Ubicación
+              </p>
+              <p className="mt-3 font-heading text-xl leading-snug text-foreground">
+                {siteContent.contact.address}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {siteContent.contact.city}, {siteContent.contact.country}
+              </p>
+            </div>
           </header>
 
           <div className="lg:col-span-7">
@@ -56,15 +60,17 @@ export function ClinicGallerySection() {
               </p>
             </div>
 
-            <figure className="mt-10 border-l border-border/80 pl-6 lg:hidden">
-              <blockquote className="font-heading text-xl italic leading-snug text-foreground">
-                &ldquo;Llegar, respirar, sentarse. Empezamos cuando estés
-                listo.&rdquo;
-              </blockquote>
-              <figcaption className="mt-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
-                {siteContent.signature}
-              </figcaption>
-            </figure>
+            <div className="mt-10 border-l border-border/80 pl-6 lg:hidden">
+              <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                Ubicación
+              </p>
+              <p className="mt-3 font-heading text-xl leading-snug text-foreground">
+                {siteContent.contact.address}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {siteContent.contact.city}, {siteContent.contact.country}
+              </p>
+            </div>
           </div>
         </div>
       </div>

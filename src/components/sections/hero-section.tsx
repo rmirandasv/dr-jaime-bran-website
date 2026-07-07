@@ -46,9 +46,6 @@ export function HeroSection() {
             >
               Cuidamos tu{" "}
               <span className="italic text-accent">sonrisa</span>
-              <span className="text-background/55">,</span>
-              <br />
-              una visita a la vez.
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-background/85">
@@ -77,9 +74,8 @@ export function HeroSection() {
               <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-background/70">
                 {siteContent.signature}
               </p>
-              <p className="mt-3 max-w-xs font-heading text-xl italic leading-snug text-background">
-                &ldquo;Una visita tranquila empieza por una atención que
-                escucha.&rdquo;
+              <p className="mt-3 max-w-xs text-base leading-relaxed text-background/90">
+                {siteContent.heroAside}
               </p>
             </div>
           </div>

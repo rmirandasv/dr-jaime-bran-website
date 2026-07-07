@@ -7,15 +7,18 @@ export const siteContent = {
     "Desde limpiezas dentales hasta tratamientos avanzados, te ofrecemos un servicio integral y personalizado.",
   heroEyebrow: "Odontología · San Salvador",
   heroPromise:
-    "Una atención dental cuidada, personal y honesta para vos y tu familia.",
+    "Odontología general e infantil en San Salvador. Atención para niños y adultos.",
+  heroAside:
+    "Consultas, limpiezas, estética dental y odontopediatría. Citas por WhatsApp.",
   signature: "Dr. Jaime Bran · Odontólogo",
   about: {
     kicker: "Sobre nosotros",
-    title: "Una práctica pensada para cada miembro de la familia.",
+    title: "Odontología familiar en San Salvador.",
     paragraphs: [
       "El Dr. Bran cuenta con un equipo profesional calificado y con amplia experiencia en odontopediatría, odontología general y estética dental.",
-      "¡Sonrisas radiantes empiezan aquí! Consulta general e infantil con atención experta y personalizada para que tú y tu familia luzcan con confianza.",
+      "Ofrecemos consultas para niños y adultos, con diagnósticos claros y planes de tratamiento adaptados a cada paciente.",
     ],
+    highlightsHeading: "Por qué elegirnos",
     highlights: [
       { label: "Equipo profesional", detail: "Calificado y cercano" },
       { label: "Experiencia clínica", detail: "Años de práctica" },
@@ -49,6 +52,28 @@ export const siteContent = {
         "Desde limpiezas dentales hasta procedimientos avanzados con tecnología moderna.",
     },
   ],
+  sections: {
+    services: {
+      kicker: "Servicios",
+      title: "Tratamientos para toda la",
+      titleAccent: "familia",
+      description:
+        "Desde la primera consulta hasta el seguimiento, cada servicio se explica con claridad antes de comenzar.",
+    },
+    clinic: {
+      kicker: "La clínica",
+      title: "Instalaciones cómodas y",
+      titleAccent: "equipadas",
+      description:
+        "Contamos con sala de espera y consultorios preparados para diagnóstico, limpiezas y tratamientos odontológicos.",
+    },
+    contact: {
+      kicker: "Contacto",
+      title: "Agenda tu",
+      titleAccent: "cita",
+      locationNote: "Visítanos en nuestro horario de atención.",
+    },
+  },
   contact: {
     address: "57 Avenida Norte 13",
     city: "San Salvador",
@@ -78,7 +103,7 @@ export const siteContent = {
       alt: "Logo Clínica Odontológica Dr. Jaime Bran",
     },
     heroBg: {
-      src: "/images/generated/hero-bg.jpg",
+      src: "/images/generated/image_001.jpg",
       alt: "Ambiente cálido del consultorio del Dr. Jaime Bran",
     },
     aboutDetail: {
