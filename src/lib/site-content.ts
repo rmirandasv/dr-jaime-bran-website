@@ -81,9 +81,9 @@ export const siteContent = {
     whatsapp: "7888 2489",
     whatsappNote: "Solo mensajes por WhatsApp",
     mapsUrl:
-      "https://www.waze.com/es/live-map/directions/sv/san-salvador-department/san-salvador/clinica-odontologica-dr.-jaime-bran?to=place.ChIJywY1qpgxY48Rawof3FH5vao",
+      "https://ul.waze.com/ul?place=ChIJywY1qpgxY48Rawof3FH5vao&ll=13.70580480%2C-89.21974000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location",
     mapsEmbedUrl:
-      "https://maps.google.com/maps?q=place_id:ChIJywY1qpgxY48Rawof3FH5vao&hl=es&z=16&output=embed",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.2087237013943!2d-89.22231492491056!3d13.705804786681265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633198aa3506cb%3A0xaabdf951dc1f0a6b!2sCl%C3%ADnica%20Odontolog%C3%ADca%20Dr.%20Jaime%20Bran!5e0!3m2!1ses-419!2ssv!4v1783977003652!5m2!1ses-419!2ssv",
     facebookUrl:
       "https://www.facebook.com/p/Cl%C3%ADnica-Odontol%C3%B3gica-Dr-Jaime-Bran-61556467850854/",
   },
