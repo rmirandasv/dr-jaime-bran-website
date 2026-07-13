@@ -9,13 +9,13 @@ export const siteContent = {
   heroPromise:
     "Odontología general e infantil en San Salvador. Atención para niños y adultos.",
   heroAside:
-    "Consultas, limpiezas, estética dental y odontopediatría. Citas por WhatsApp.",
+    "Consultas, limpiezas, estética dental y odontología infantil. Citas por WhatsApp.",
   signature: "Dr. Jaime Bran · Odontólogo",
   about: {
     kicker: "Sobre nosotros",
     title: "Odontología familiar en San Salvador.",
     paragraphs: [
-      "El Dr. Bran cuenta con un equipo profesional calificado y con amplia experiencia en odontopediatría, odontología general y estética dental.",
+      "El Dr. Bran cuenta con un equipo profesional calificado y con amplia experiencia en odontología infantil, odontología general y estética dental.",
       "Ofrecemos consultas para niños y adultos, con diagnósticos claros y planes de tratamiento adaptados a cada paciente.",
     ],
     highlightsHeading: "Por qué elegirnos",
@@ -29,7 +29,7 @@ export const siteContent = {
   services: [
     {
       id: "pediatric",
-      title: "Odontopediatría",
+      title: "Odontología infantil",
       description:
         "Atención dental especializada para niños en un ambiente cómodo y amigable.",
     },
